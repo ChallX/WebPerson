@@ -7,17 +7,32 @@
     <title>Hello World</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-cpZw9o5b17I6eP5EabMq4AhePIJL3ROiz8UjvN8v7N9OqAt6N7Q4jKvoNHc5VPME" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/ea623d6bd7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="shortcut icon" href="./assets/img/profile.png" type="image/x-icon" />
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("WRjolZXJSX7iemyOz");
+   })();
+</script>
 </head>
 <body>        
     <section class="head" id="beranda">
 
         <div class="navbar">
-            <nav>
-                <h2 class="nav-head">Hello, <b>Everyone!</b></h2>
+            <nav>        
+
+                <h2 class="nav-head">Hello, <b>Everyone!</b></h2>       
+                <div class="hamburger" onclick="toggleNavbar()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
                 <ul class="overlay-content">
                     <li class="overlay-li"><a class="overlay-a" href="#beranda">Beranda</a></li>
                     <li class="overlay-li"><a class="overlay-a" href="#tentang">Tentang Saya</a></li>
@@ -25,26 +40,27 @@
                     <li class="overlay-li"><a class="overlay-a" href="#penghargaan">Perhargaan</a></li>
                     <li class="overlay-li"><a class="overlay-a" href="#hubungi">Hubungi Saya</a></li>
                 </ul>
-        </nav>
+        </nav> 
+
         </div>
+
+       
     
-
-
-
     <div class="hero">
-        <h2 class="hero-title">Halo Semuanya! Perkenalkan Nama Saya <span class="hero-span">Louis Marchall <b class="bar-span">Joheart Cardoso</b> </span> </h2>
-        <h3 class="hero-desc">Seorang Front End Developer!</h3>
-        <img class="hero-img" src="./assets/img/profile.png" alt="">
+        <h2 id="satu" class="hero-title">Halo Semuanya! Perkenalkan Nama Saya <span class="hero-span">Louis Marchall <b class="bar-span">Joheart Cardoso</b> </span> </h2>
+        <h3 class="hero-desc">Seorang Website <b>Developer!</b></h3>
+        <button class="hero-button"><a href="./assets/img/LouisCV.pdf"><p>Download CV</p></a></button>
+        <!-- <img class="hero-img" src="./assets/img/profile.png" alt="">
         <svg class="hero-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
             <path class="hero-path" fill="#F99417" d="M27,-31.7C38.7,-28.7,54.3,-25.7,56,-18.6C57.8,-11.5,45.7,-0.3,41.6,13.9C37.6,28.2,41.6,45.4,36,56.1C30.4,66.7,15.2,70.7,-0.8,71.8C-16.8,72.9,-33.6,71.2,-48.2,63.5C-62.9,55.8,-75.3,42.1,-82,25.7C-88.6,9.2,-89.4,-10,-79.2,-20.9C-69,-31.8,-47.8,-34.2,-32.8,-36.1C-17.7,-37.9,-8.9,-39.2,-0.6,-38.4C7.7,-37.6,15.4,-34.6,27,-31.7Z" transform="translate(100 100)" />
-          </svg>
+          </svg> -->
     </div>
     </section>
 
     <section class="about" id="tentang">
     <div class="tentangsaya">
         <h3 class="tentangtitle">Tentang Saya</h3>
-        <h3 class="tentangdesc">Seorang <b>Front-End Developer </b>Yang Masih Berkembang</h3>
+        <h3 class="tentangdesc">Seorang <b>Website Developer </b>Yang Masih Berkembang</h3>
         <p class="tentangp">Saat ini saya sedang bersekolah di sekolah adiwiyata yaitu <b>SMK Wikrama Bogor</b> disini saya belajar banyak hal terutama di bidang IT. Mulai dari yang basic sampai yang menengah, untuk sekarang saya lagi belajar bagaimana caranya menjadi <b>Front-End Developer</b> yang kreatif.</p>
     </div>
     <div class="tentangkontak">
@@ -113,6 +129,9 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide"><img src="./assets/img/serti1.png" alt=""></div>
               <div class="swiper-slide"><img src="./assets/img/serti2.png" alt=""></div>
+              <div class="swiper-slide"><img src="./assets/img/serti3.png" alt=""></div>
+              <div class="swiper-slide"><img src="./assets/img/serti4.png" alt=""></div>
+              <div class="swiper-slide"><img src="./assets/img/serti5.png" alt=""></div>
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
@@ -122,7 +141,46 @@
     <section class="hubungi" id="hubungi">
         <h3>Hubungi Saya!</h3>
         <h3 class="hubdesc"><b class="bar-span">Hubungi Saya</b> Jika Kamu Memiliki Masukan!</h3>
-        </form>
+        <div class="container">
+            <div class="content">
+              <div class="left-side">
+                <div class="address details">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <div class="topic">Address</div>
+                  <div class="text-one">Bojong Gede</div>
+                  <div class="text-two">Bogor</div>
+                </div>
+                <div class="phone details">
+                  <i class="fas fa-phone-alt"></i>
+                  <div class="topic">Phone</div>
+                  <div class="text-one">+62 821-1098-4800</div>
+                </div>
+                <div class="email details">
+                  <i class="fas fa-envelope"></i>
+                  <div class="topic">Email</div>
+                  <div class="text-one">louismarchal237@gmail.com</div>
+                </div>
+              </div>
+              <div class="right-side">
+                <div class="topic-text">Kirim Saya Sebuah Pesan!</div>
+                <p>Jika kamu memiliki masukan atau sebuah pesan <b>untuk ku</b>, jangan sungkan untuk mengisi form dibawah dan kirim sebuah pesan <b>untuk ku!</b></p>
+              <form action="">
+                <div class="input-box">
+                  <input type="text" id="nama" placeholder="Masukkan Nama Anda">
+                </div>
+                <div class="input-box">
+                  <input type="text" id="email" placeholder="Masukkan Email Anda (johndoe@gmail.com)">
+                </div>
+                <div class="input-box message-box">
+                    <textarea placeholder="Masukkan Pesan Anda" id="message"></textarea>
+                </div>
+                <div class="button">
+                    <button class="button" type="button" onclick="sendMail()">Kirim Sekarang!</button>
+                </div>
+              </form>
+            </div>
+            </div>
+          </div>
     </section>
     <section class="">
         <footer>
@@ -147,11 +205,19 @@
         <div class="footerBottom">
             <p class="footer-p">Copyright &copy;2023; Designed Purely by <b class="designer">Louis Marchall</b></p>
         </div>
+
+
     </footer>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./assets/js/script.js"></script>
+    <script>
+        function toggleNavbar() {
+            var navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('open');
+        }
+    </script>
     
 </body>
 </html>
